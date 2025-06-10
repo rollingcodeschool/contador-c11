@@ -1,12 +1,13 @@
-const Informacion = (props) => {
+const Informacion = ({ anio, comisionProps }) => {
   return (
     <section>
       <h2>Primer proyecto con react</h2>
       <p>
         React es una biblioteca de JavaScript desarrollada por Facebook para
-        construir interfaces de usuario. <br/>Se destaca por su enfoque en la
-        creación de aplicaciones web de una sola página SPA y su capacidad para
-        manejar la interfaz de manera eficiente mediante el uso de un <b>DOM virtual</b>.
+        construir interfaces de usuario. <br />
+        Se destaca por su enfoque en la creación de aplicaciones web de una sola
+        página SPA y su capacidad para manejar la interfaz de manera eficiente
+        mediante el uso de un <b>DOM virtual</b>.
       </p>
       <p>
         React permite a los desarrolladores construir interfaces dinámicas y
@@ -14,7 +15,10 @@ const Informacion = (props) => {
         mantenimiento de aplicaciones a gran escala.
       </p>
       <article className="bg-primary-subtle p-3 rounded-2">
-        <p>Practica de contador de la <strong>comision {props.comisionProps}</strong></p>
+        <p>
+          Practica de contador de la <strong>comision {comisionProps}</strong> -{" "}
+          {anio}
+        </p>
       </article>
     </section>
   );
